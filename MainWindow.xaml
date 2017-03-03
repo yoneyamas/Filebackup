@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Filebackup"
         mc:Ignorable="d"
-        Title="Filebackup" Height="350" Width="525">
-    <Grid>
+        Title="Filebackup" Height="600" Width="800">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="5" Grid.Row="0" Orientation="Horizontal">
+            <Label Content="バックアップ中のディレクトリ" HorizontalAlignment="Left" />
+        </StackPanel>
+        <StackPanel Margin="5, 5, 30, 5" Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Button Content="同期" HorizontalAlignment="Right" />
+        </StackPanel>
+        <TreeView Grid.Row="1" Width="Auto">
+            <TreeViewItem Header="Item1">
+                <TreeViewItem Header="Item2" />
+            </TreeViewItem>
+        </TreeView>
+        <StackPanel Grid.Row="2">
+            <Button Content="追加" HorizontalAlignment="Left" Margin="30,10,0,10"/>
+        </StackPanel>
 
     </Grid>
 </Window>
